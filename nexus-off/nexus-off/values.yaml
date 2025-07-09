@@ -107,7 +107,7 @@ deployment:
   additionalVolumeMounts:
 
 ingress:
-  enabled: false
+  enabled: true
   ingressClassName: nginx
   annotations:
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
@@ -123,8 +123,12 @@ service:
   name: nexus3
   enabled: true
   labels: {}
-  annotations: {}
-  type: ClusterIP
+  type: LoadBalancer
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
+    service.beta.kubernetes.io/aws-load-balancer-scheme: "internal"
+    service.beta.kubernetes.io/aws-load-balancer-internal: "true"
+ 
 
 
 route:
