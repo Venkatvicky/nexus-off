@@ -51,7 +51,7 @@ nexus:
   #     memory: 8Gi
 
   # The ports should only be changed if the nexus image uses a different port
-  nexusPort: 8081
+  nexusPort: 80
 
   # Default the pods UID and GID to match the nexus3 container.
   # Customize or remove these values from the securityContext as appropriate for
