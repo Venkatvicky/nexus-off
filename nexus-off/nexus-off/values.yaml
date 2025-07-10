@@ -112,7 +112,7 @@ ingress:
   annotations:
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
   hosts:
-    - host: int.cloudmasa.com
+    - host: nexus.int.cloudmasa.com
       paths:
         - path: /
           pathType: Prefix
