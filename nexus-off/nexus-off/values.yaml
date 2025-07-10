@@ -111,12 +111,12 @@ ingress:
   ingressClassName: nginx
   annotations:
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
-  hostPath: /
-  hostRepo: repo.demo
-  # tls:
-  #   - secretName: nexus-local-tls
-  #   hosts: int.cloudmasa.com
-  #       - repo.demo
+  hosts:
+    - host: nexus.int.cloudmasa.com
+      paths:
+        - path: /
+          pathType: Prefix
+  tls: [] 
 
 
 service:
