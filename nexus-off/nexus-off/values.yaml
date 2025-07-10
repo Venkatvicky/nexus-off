@@ -51,7 +51,7 @@ nexus:
   #     memory: 8Gi
 
   # The ports should only be changed if the nexus image uses a different port
-  nexusPort: 8080
+  nexusPort: 8081
 
   # Default the pods UID and GID to match the nexus3 container.
   # Customize or remove these values from the securityContext as appropriate for
@@ -67,14 +67,12 @@ nexus:
     failureThreshold: 6
     timeoutSeconds: 10
     path: /
-    port: 8080
   readinessProbe:
     initialDelaySeconds: 30
     periodSeconds: 30
     failureThreshold: 6
     timeoutSeconds: 10
     path: /
-    port: 8080
   # hostAliases allows the modification of the hosts file inside a container
   hostAliases: []
   # - ip: "192.168.1.10"
