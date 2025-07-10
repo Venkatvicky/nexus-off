@@ -41,7 +41,7 @@ spec:
               service:
                 name: {{ $fullName }}
                 port:
-                  number: 8081
+                  number: 80
 
 {{ if .Values.nexus.docker.enabled }}
 {{ range $registry := .Values.nexus.docker.registries }}
