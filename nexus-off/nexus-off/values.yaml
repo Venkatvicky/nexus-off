@@ -51,7 +51,7 @@ nexus:
   #     memory: 8Gi
 
   # The ports should only be changed if the nexus image uses a different port
-  nexusPort: 8080
+  nexusPort: 8081
 
   # Default the pods UID and GID to match the nexus3 container.
   # Customize or remove these values from the securityContext as appropriate for
@@ -112,7 +112,7 @@ ingress:
   annotations:
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
   hostPath: /
-  hostRepo: nexus.int.cloudmasa.com
+  hostRepo: repo.demo
   # tls:
   #   - secretName: nexus-local-tls
   #   hosts: int.cloudmasa.com
