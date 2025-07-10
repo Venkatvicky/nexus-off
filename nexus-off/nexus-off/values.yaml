@@ -115,7 +115,7 @@ ingress:
   hostRepo: repo.demo
   # tls:
   #   - secretName: nexus-local-tls
-      hosts: nexus.int.cloudmasa.com
+      hosts: int.cloudmasa.com
   #       - repo.demo
 
 
